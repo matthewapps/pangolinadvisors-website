@@ -1,0 +1,882 @@
+<!doctype html>
+<html lang="en-GB">
+  <head>
+    <link rel="icon" href="assets/Pangolin_Logo_Assets/favicon.ico" />
+
+<link rel="apple-touch-icon" href="assets/Pangolin_Logo_Assets/pangolin-logo-180.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pangolin Advisors | Cybersecurity, Risk & Compliance Advisory</title>
+    <meta
+      name="description"
+      content="Pangolin Advisors provides board-level cybersecurity, risk and compliance advisory services for regulated and growth-focused organisations."
+    />
+    <meta property="og:title" content="Pangolin Advisors" />
+    <meta
+      property="og:description"
+      content="Board-level cybersecurity, risk and compliance advisory. Protected. Compliant. Prepared."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.pangolinadvisors.com" />
+    <meta name="theme-color" content="#0B1F3A" />
+    <style>
+      :root {
+        --navy: #0b1f3a;
+        --navy-2: #102b4d;
+        --ink: #162033;
+        --muted: #5d6a7e;
+        --silver: #c7cedb;
+        --pale: #f5f7fb;
+        --white: #ffffff;
+        --bronze: #a97c50;
+        --bronze-2: #c49868;
+        --line: rgba(11, 31, 58, 0.12);
+        --shadow: 0 24px 70px rgba(11, 31, 58, 0.18);
+        --radius: 22px;
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family:
+          Inter,
+          Aptos,
+          -apple-system,
+          BlinkMacSystemFont,
+          'Segoe UI',
+          Roboto,
+          Arial,
+          sans-serif;
+        color: var(--ink);
+        background: var(--white);
+        line-height: 1.55;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      .container {
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        background: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--line);
+      }
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 78px;
+        gap: 24px;
+      }
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        font-weight: 800;
+        letter-spacing: 0.02em;
+        color: var(--navy);
+      }
+      .mark {
+        width: 42px;
+        height: 42px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--navy), var(--navy-2));
+        position: relative;
+        box-shadow: 0 10px 24px rgba(11, 31, 58, 0.25);
+      }
+      .mark:before {
+        content: '';
+        position: absolute;
+        inset: 9px 10px 8px 10px;
+        border: 2px solid var(--bronze-2);
+        border-radius: 50% 50% 45% 45%;
+        transform: rotate(-24deg);
+      }
+      .brand span {
+        font-size: 1.05rem;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 26px;
+        padding: 0;
+        margin: 0;
+        align-items: center;
+      }
+      nav a {
+        color: #35445a;
+        font-size: 0.95rem;
+        font-weight: 600;
+      }
+      nav a:hover {
+        color: var(--bronze);
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        border-radius: 999px;
+        padding: 13px 20px;
+        font-weight: 800;
+        border: 1px solid transparent;
+        transition:
+          transform 0.18s ease,
+          box-shadow 0.18s ease,
+          background 0.18s ease;
+        cursor: pointer;
+      }
+      .btn:hover {
+        transform: translateY(-1px);
+      }
+      .btn-primary {
+        background: var(--bronze);
+        color: white;
+        box-shadow: 0 12px 30px rgba(169, 124, 80, 0.28);
+      }
+      .btn-primary:hover {
+        background: #946a42;
+      }
+      .btn-secondary {
+        background: rgba(255, 255, 255, 0.08);
+        color: white;
+        border-color: rgba(255, 255, 255, 0.22);
+      }
+      .btn-light {
+        background: white;
+        color: var(--navy);
+        border-color: var(--line);
+      }
+
+      .hero {
+        background:
+          radial-gradient(
+            circle at 72% 22%,
+            rgba(199, 206, 219, 0.24),
+            transparent 34%
+          ),
+          linear-gradient(135deg, #07182d 0%, var(--navy) 48%, #132d4d 100%);
+        color: white;
+        padding: 84px 0 72px;
+        overflow: hidden;
+        position: relative;
+      }
+      .hero:after {
+        content: '';
+        position: absolute;
+        width: 560px;
+        height: 560px;
+        right: -190px;
+        bottom: -260px;
+        border-radius: 50%;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 0.92fr;
+        gap: 54px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 9px;
+        color: #dbe3ef;
+        font-size: 0.88rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        font-weight: 800;
+      }
+      .eyebrow:before {
+        content: '';
+        width: 34px;
+        height: 2px;
+        background: var(--bronze-2);
+        display: inline-block;
+      }
+      h1 {
+        font-size: clamp(2.7rem, 5vw, 5.25rem);
+        line-height: 0.98;
+        letter-spacing: -0.055em;
+        margin: 20px 0 22px;
+      }
+      .lead {
+        color: #dbe3ef;
+        font-size: clamp(1.12rem, 1.7vw, 1.34rem);
+        max-width: 690px;
+        margin: 0 0 30px;
+      }
+      .hero-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+        margin-top: 34px;
+      }
+      .proof {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 34px;
+        color: #d6deea;
+        font-size: 0.94rem;
+      }
+      .proof span {
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        padding: 8px 12px;
+        border-radius: 999px;
+      }
+      .hero-card {
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        border-radius: 30px;
+        padding: 26px;
+        box-shadow: var(--shadow);
+      }
+      .hero-card img {
+        width: 100%;
+        display: block;
+        border-radius: 22px;
+        opacity: 0.96;
+      }
+      .hero-note {
+        margin-top: 18px;
+        color: #dbe3ef;
+        font-size: 0.96rem;
+      }
+
+      section {
+        padding: 86px 0;
+      }
+      .section-head {
+        max-width: 780px;
+        margin-bottom: 40px;
+      }
+      .kicker {
+        color: var(--bronze);
+        text-transform: uppercase;
+        letter-spacing: 0.13em;
+        font-size: 0.82rem;
+        font-weight: 900;
+        margin-bottom: 12px;
+      }
+      h2 {
+        font-size: clamp(2rem, 3.4vw, 3.2rem);
+        line-height: 1.04;
+        letter-spacing: -0.04em;
+        margin: 0 0 18px;
+        color: var(--navy);
+      }
+      .section-head p {
+        color: var(--muted);
+        font-size: 1.08rem;
+        margin: 0;
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 22px;
+      }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        padding: 28px;
+        box-shadow: 0 10px 35px rgba(11, 31, 58, 0.06);
+      }
+      .card h3 {
+        color: var(--navy);
+        font-size: 1.28rem;
+        margin: 0 0 10px;
+        letter-spacing: -0.02em;
+      }
+      .card p {
+        color: var(--muted);
+        margin: 0;
+      }
+      .icon {
+        width: 46px;
+        height: 46px;
+        border-radius: 15px;
+        background: #f0e8df;
+        color: var(--bronze);
+        display: grid;
+        place-items: center;
+        font-weight: 900;
+        margin-bottom: 20px;
+      }
+      .soft {
+        background: var(--pale);
+      }
+      .dark-band {
+        background: var(--navy);
+        color: white;
+      }
+      .dark-band h2 {
+        color: white;
+      }
+      .dark-band .section-head p,
+      .dark-band .card p {
+        color: #dbe3ef;
+      }
+      .dark-band .card {
+        background: rgba(255, 255, 255, 0.07);
+        border-color: rgba(255, 255, 255, 0.14);
+        box-shadow: none;
+      }
+      .dark-band .card h3 {
+        color: white;
+      }
+
+      .service-list {
+        display: grid;
+        gap: 16px;
+      }
+      .service {
+        display: grid;
+        grid-template-columns: 190px 1fr auto;
+        gap: 22px;
+        align-items: start;
+        padding: 24px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius);
+        background: white;
+      }
+      .service strong {
+        color: var(--navy);
+        font-size: 1.08rem;
+      }
+      .service p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .service .tag {
+        color: var(--bronze);
+        font-weight: 900;
+        white-space: nowrap;
+      }
+
+      .about-wrap {
+        display: grid;
+        grid-template-columns: 0.85fr 1.15fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .portrait {
+        min-height: 420px;
+        border-radius: 32px;
+        background:
+          linear-gradient(135deg, rgba(169, 124, 80, 0.18), transparent),
+          linear-gradient(135deg, #0b1f3a, #193a61);
+        position: relative;
+        overflow: hidden;
+        box-shadow: var(--shadow);
+      }
+      .portrait:before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        color: rgba(255, 255, 255, 0.16);
+        font-size: 8rem;
+        font-weight: 900;
+        letter-spacing: -0.08em;
+      }
+      .founder-label {
+        font-size: 0.75rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--bronze);
+        font-weight: 800;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .founder-name {
+        color: var(--navy);
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+        line-height: 1.1;
+      }
+
+      .founder-title {
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 24px;
+      }
+      .credentials {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 24px;
+      }
+      .credentials span {
+        background: var(--pale);
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--navy);
+        font-weight: 800;
+        font-size: 0.9rem;
+      }
+
+      .cta {
+        background: linear-gradient(135deg, var(--navy), #16385f);
+        color: white;
+        border-radius: 36px;
+        padding: 54px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 24px;
+        align-items: center;
+        box-shadow: var(--shadow);
+      }
+      .cta h2 {
+        color: white;
+        margin-bottom: 12px;
+      }
+      .cta p {
+        color: #dbe3ef;
+        margin: 0;
+        max-width: 720px;
+      }
+      .portrait img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 24px;
+        box-shadow:
+          0 10px 30px rgba(0, 0, 0, 0.2),
+          0 30px 60px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.15);
+      }
+      footer {
+        padding: 40px 0;
+        background: #07182d;
+        color: #cbd5e1;
+      }
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .footer-inner small {
+        color: #9ba8ba;
+      }
+.logo {
+  height: 56px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 900px) {
+  .logo {
+    height: 44px;
+  }
+}
+      @media (max-width: 900px) {
+        nav ul {
+          display: none;
+        }
+        .hero-grid,
+        .grid-3,
+        .grid-2,
+        .about-wrap,
+        .cta {
+          grid-template-columns: 1fr;
+        }
+        .hero {
+          padding-top: 64px;
+        }
+        .service {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
+        .service .tag {
+          white-space: normal;
+        }
+        .cta {
+          padding: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container nav">
+       <a class="brand" href="#top" aria-label="Pangolin Advisors home">
+
+  <img
+
+    src="assets/Pangolin_Logo_Assets/pangolin-logo-128.png"
+
+    alt="Pangolin Advisors"
+
+    class="logo"
+
+  />
+
+  <span>Pangolin Advisors</span>
+
+</a>
+        <nav aria-label="Primary navigation">
+          <ul>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why">Why Pangolin</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li>
+              <a class="btn btn-light" href="mailto:hello@pangolinadvisors.com"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <div class="eyebrow">Cyber • Risk • Compliance</div>
+            <h1>Board-level cybersecurity and compliance advisory.</h1>
+            <p class="lead">
+              Pangolin Advisors helps organisations navigate cyber risk,
+              regulatory change and operational resilience with clear,
+              pragmatic, executive-level guidance.
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn btn-primary"
+                href="mailto:hello@pangolinadvisors.com?subject=Introductory%20call%20with%20Pangolin%20Advisors"
+                >Book an introductory call</a
+              >
+              <a class="btn btn-secondary" href="#services">Explore services</a>
+            </div>
+            <div class="proof" aria-label="Credentials">
+              <span>Virtual CISO</span>
+              <span>NIS2 Readiness</span>
+              <span>DORA Advisory</span>
+              <span>Vendor Assurance</span>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="Pangolin Advisors brand concept">
+            <img
+              src="assets/pangolin-brand-concept.png"
+              alt="Pangolin Advisors brand identity concept"
+            />
+            <p class="hero-note">Protected. Compliant. Prepared.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">What we do</div>
+            <h2>
+              Experienced guidance for organisations where trust, resilience and
+              regulation matter.
+            </h2>
+            <p>
+              We work with leadership teams, boards and growing businesses that
+              need senior cybersecurity and compliance expertise without
+              unnecessary complexity.
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <div class="icon">01</div>
+              <h3>Reduce risk</h3>
+              <p>
+                Identify material cyber, supplier and operational risks, then
+                prioritise the actions that matter most.
+              </p>
+            </div>
+            <div class="card">
+              <div class="icon">02</div>
+              <h3>Improve readiness</h3>
+              <p>
+                Prepare for NIS2, DORA, ISO 27001 and board-level assurance
+                through practical programmes.
+              </p>
+            </div>
+            <div class="card">
+              <div class="icon">03</div>
+              <h3>Support growth</h3>
+              <p>
+                Build security and compliance foundations that help win clients,
+                satisfy investors and protect reputation.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="soft">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">Services</div>
+            <h2>Advisory services designed for practical outcomes.</h2>
+            <p>
+              Start with a focused assessment, then progress to retained
+              advisory, compliance transformation or ongoing executive support.
+            </p>
+          </div>
+          <div class="service-list">
+            <article class="service">
+              <strong>Virtual CISO</strong>
+              <p>
+                Executive-level cybersecurity leadership, board reporting,
+                strategy, risk oversight and supplier assurance without the cost
+                of a full-time CISO.
+              </p>
+              <span class="tag">Retained advisory</span>
+            </article>
+            <article class="service">
+              <strong>Cyber Health Check</strong>
+              <p>
+                A focused review of your organisation’s cyber posture, key risks
+                and immediate priorities, delivered as a clear executive
+                roadmap.
+              </p>
+              <span class="tag">Fast start</span>
+            </article>
+            <article class="service">
+              <strong>NIS2 Readiness</strong>
+              <p>
+                Assessment and planning across governance, risk management,
+                incident response, supply-chain security and compliance
+                readiness.
+              </p>
+              <span class="tag">EU regulation</span>
+            </article>
+            <article class="service">
+              <strong>DORA Readiness</strong>
+              <p>
+                Practical support for financial services firms and technology
+                providers affected by digital operational resilience
+                obligations.
+              </p>
+              <span class="tag">Financial services</span>
+            </article>
+            <article class="service">
+              <strong>Vendor Assurance</strong>
+              <p>
+                Independent review of suppliers, technology partners and
+                third-party risks against security, resilience and compliance
+                expectations.
+              </p>
+              <span class="tag">Supply chain</span>
+            </article>
+            <article class="service">
+              <strong>ISO 27001 Advisory</strong>
+              <p>
+                Gap assessments, roadmap planning and programme oversight for
+                organisations implementing or improving an ISMS.
+              </p>
+              <span class="tag">Governance</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="dark-band">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">Why Pangolin Advisors</div>
+            <h2>
+              Cybersecurity is a board-level business risk, not just a technical
+              issue.
+            </h2>
+            <p>
+              We focus on clarity, proportionality and business outcomes. No
+              scare tactics. No unnecessary complexity. No jargon-heavy reports
+              that sit unread.
+            </p>
+          </div>
+          <div class="grid-3">
+            <div class="card">
+              <h3>Protection</h3>
+              <p>
+                Like the pangolin, organisations need intelligent layers of
+                defence that adapt to changing threats.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Clarity</h3>
+              <p>
+                We translate technical and regulatory complexity into decisions
+                boards and executives can act on.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Pragmatism</h3>
+              <p>
+                We prioritise proportionate improvements that strengthen
+                resilience without overwhelming the business.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container about-wrap">
+          <div class="portrait">
+            <img
+              src="images/matthew-apps-pen_picture.png"
+              alt="Matthew Apps - Founder & Principal Advisor"
+              loading="eager"
+            />
+          </div>
+         <div>
+  <span class="founder-label">Trusted Advisor</span>
+
+  <div class="founder-name">
+    Matthew Apps MSc, CISM
+  </div>
+
+  <div class="founder-title">
+    Founder & Principal Advisor
+  </div>
+
+  <p>
+    Pangolin Advisors was founded by Matthew Apps, an experienced
+    technology and cybersecurity leader with over 30 years of
+    experience delivering complex programmes, managing risk and
+    advising organisations operating in regulated environments.
+  </p>
+
+  <p>
+    Combining executive leadership, financial services expertise and
+    cybersecurity knowledge, Matthew helps boards and leadership teams
+    make confident decisions about cyber risk, compliance and
+    operational resilience.
+  </p>
+
+  <div class="credentials">
+    <span>30+ Years Experience</span>
+    <span>MSc Cybersecurity</span>
+    <span>CISM Certified</span>
+    <span>Financial Services Specialist</span>
+    <span>Virtual CISO</span>
+    <span>Board Advisory</span>
+  </div>
+</div>
+      </section>
+
+      <section id="insights" class="soft">
+        <div class="container">
+          <div class="section-head">
+            <div class="kicker">Insights</div>
+            <h2>Practical thinking for boards and leadership teams.</h2>
+            <p>
+              Coming soon: executive briefings on cyber readiness, regulatory
+              change, supply-chain risk and AI governance.
+            </p>
+          </div>
+          <div class="grid-2">
+            <div class="card">
+              <h3>NIS2 readiness for mid-market organisations</h3>
+              <p>
+                What leadership teams should prioritise before regulation
+                becomes an urgent problem.
+              </p>
+            </div>
+            <div class="card">
+              <h3>DORA and operational resilience</h3>
+              <p>
+                Lessons from financial services for organisations dependent on
+                technology and third parties.
+              </p>
+            </div>
+            <div class="card">
+              <h3>What boards need to know about cyber risk</h3>
+              <p>
+                A practical guide to asking better questions and demanding
+                clearer evidence.
+              </p>
+            </div>
+            <div class="card">
+              <h3>Vendor assurance and supply-chain security</h3>
+              <p>
+                How to manage third-party risk without creating a bureaucratic
+                monster.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="cta">
+            <div>
+              <h2>
+                Ready to strengthen your cyber, risk and compliance position?
+              </h2>
+              <p>
+                Book an introductory call to discuss your objectives, regulatory
+                pressures and immediate priorities.
+              </p>
+            </div>
+            <a
+              class="btn btn-primary"
+              href="mailto:hello@pangolinadvisors.com?subject=Introductory%20call%20with%20Pangolin%20Advisors"
+              >Contact Pangolin Advisors</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-inner">
+        <div class="brand" style="color: #fff">
+  <img
+    src="assets/Pangolin_Logo_Assets/pangolin-logo-128.png"
+    alt="Pangolin Advisors"
+    class="logo"
+  />
+  <span>Pangolin Advisors</span>
+</div>
+        <small
+          >© <span id="year"></span> Pangolin Advisors. Protected. Compliant.
+          Prepared.</small
+        >
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
